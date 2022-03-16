@@ -6,35 +6,37 @@
 
 .container {
     display: block;
-    border: 2px solid black;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 2em;
+    padding: 0.5em 0 1em 2em;
+}
+
+.container2 {
+    padding-left: 2em;
 }
 
 #system {
-    border: 2px solid black;
     max-width: 90%;
     margin: auto;
 }
 
-p {
-    margin-bottom: 2em;
+table {
+    max-width: 80%;
 }
 
-#system label {
-    display: block;
-	padding-left: 15px;
-	text-indent: -15px;
+#address {
+    width: 42em;
+}
+
+p {
+    margin-bottom: 1.5em;
 }
 
 #system input {
-    width: 20em;
-	height: 2em;
-	padding: 0;
-	margin: 0;
-	vertical-align: bottom;
-	position: relative;
-	top: -1px;
-	*overflow: hidden;
+    padding-right: 1em;
+}
+
+#system label {
+    padding: 0;
 }

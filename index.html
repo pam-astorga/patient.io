@@ -25,55 +25,73 @@
     <h2>Patient Form</h2>
     <p>Welcome, </p>
     <form id="system">
-        <label>First Name: </label>
-        <input type="text" name="firstname" id="firstname">
-
-        <label>Middle Name: </label>
-        <input type="text" name="middlename" id="middlename">
-
-        <label>Last Name: </label>
-        <input type="text" name="lastname" id="lastname">
-
-        <label>Address: </label>
-        <input type="text" name="address" id="address">
-
-        <label> Birthdate: </label>
-        <input type="datetime" name="birthdate" id="birthdate">
-
-        <label> Contact Number: </label>
-        <input type="tel" name="contact" id="contact" placeholder="e.g 0912-345-6789">
-
-        <label> Gender: </label>
-        <input type="radio" name="gender" id="gender"> Male
-        <input type="radio" name="gender" id="gender"> Female
-
-        <label> Medical History: </label>
-        <input type="checkbox" name="medHistory" id="medHistory"> Asthma
-        <input type="checkbox" name="medHistory" id="medHistory"> Cancer
-        <input type="checkbox" name="medHistory" id="medHistory"> Cardiac Disease
-        <input type="checkbox" name="medHistory" id="medHistory"> Diabetes
-        <input type="checkbox" name="medHistory" id="medHistory"> Hypertension
-        <input type="checkbox" name="medHistory" id="medHistory"> Psychiatric Disorder
-        <input type="checkbox" name="medHistory" id="medHistory"> Epilepsy
-        <input type="checkbox" name="medHistory" id="medHistory"> Others
-
-        <label>Current Symptoms: </label>
-        <select name="symptom" id="symptom" multiple>
-            <option value="">Chest Pain</option>
-            <option value="">Respiratory</option>
-            <option value="">Hematological</option>
-            <option value="">Lymphatic</option>
-            <option value="">Neurological</option>
-        </select>
-
-        <label> Are you currently taking any medication? </label>
-        <input type="radio" name="medication" id="medication"> Yes
-        <input type="radio" name="medication" id="medication"> No
-        <input type="text" name="ifYes" id="ifYes" placeholder="If Yes, please list down your current medications.">
-
+        <table>
+            <tr>
+                <td><input type="text" name="firstname" id="firstname"></td>
+                <td><input type="text" name="middlename" id="middlename"></td>
+                <td><input type="text" name="lastname" id="lastname"></td>
+            </tr>
+            <tr>
+                <td><label>First Name </label></td>
+                <td><label>Middle Name </label></td>
+                <td><label>Last Name </label></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="text" name="address" id="address"></td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+            </tr>
+            <tr>
+                <td><input type="datetime" name="birthdate" id="birthdate"></td>
+                <td><input type="tel" name="contact" id="contact" placeholder="e.g 0912-345-6789"></td>
+                <td> <label> Gender: </label>
+                    <input type="radio" name="gender" id="gender"> Male
+                    <input type="radio" name="gender" id="gender"> Female
+                </td>
+            </tr>
+            <tr>
+                <td><label> Birthdate: </label></td>
+                <td><label> Contact Number: </label></td>
+            </tr>
+            <tr>
+                <td><label> Medical History: </label></td>
+                <td>
+                    <input type="checkbox" name="medHistory" id="medHistory"> Asthma <br>
+                    <input type="checkbox" name="medHistory" id="medHistory"> Cancer <br>
+                    <input type="checkbox" name="medHistory" id="medHistory"> Cardiac Disease <br>
+                    <input type="checkbox" name="medHistory" id="medHistory"> Diabetes
+                </td>
+                <td>
+                    <input type="checkbox" name="medHistory" id="medHistory"> Hypertension <br>
+                    <input type="checkbox" name="medHistory" id="medHistory"> Psychiatric Disorder <br>
+                    <input type="checkbox" name="medHistory" id="medHistory"> Epilepsy <br>
+                    <input type="checkbox" name="medHistory" id="medHistory"> Others
+                </td>
+            </tr>
+            <tr>
+                <td><label>Current Symptoms: </label></td>
+                <td>
+                    <select name="symptom" id="symptom" multiple>
+                        <option value="">Chest Pain</option>
+                        <option value="">Respiratory</option>
+                        <option value="">Hematological</option>
+                        <option value="">Lymphatic</option>
+                        <option value="">Neurological</option>
+                    </select>
+                </td>
+                <td>
+                    <label> Are you currently taking any medication? </label>
+                    <input type="radio" name="medication" id="medication"> Yes
+                    <input type="radio" name="medication" id="medication"> No
+                    <input type="text" name="ifYes" id="ifYes" placeholder="If Yes, please list down your current medications.">
+                </td>
+            </tr>
+        </table>
         <button id="submit">SUBMIT</button>
         <button id="reset">RESET</button>
     </form>
 </div>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
