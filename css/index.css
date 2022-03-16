@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: block;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+#system {
+    border: 2px solid black;
+    max-width: 90%;
+    margin: auto;
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+#system label {
+    display: block;
+	padding-left: 15px;
+	text-indent: -15px;
+}
+
+#system input {
+    width: 20em;
+	height: 2em;
+	padding: 0;
+	margin: 0;
+	vertical-align: bottom;
+	position: relative;
+	top: -1px;
+	*overflow: hidden;
+}

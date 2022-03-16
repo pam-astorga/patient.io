@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information System</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container">
+        <h1>Login Information</h1>
+        <small id="error"></small>
+    <form id="loginForm">
+        <label>Username: </label>
+        <input type="text" name="username" id="username">
+
+        <label>Password</label>
+        <input type="password" name="password" id="password">
+
+        <button type="submit" id="submit">Log-in</button>
+    </form>
+</div>
+<div class="container2">
+    <h2>Patient Form</h2>
+    <p>Welcome, </p>
+    <form id="system">
+        <label>First Name: </label>
+        <input type="text" name="firstname" id="firstname">
+
+        <label>Middle Name: </label>
+        <input type="text" name="middlename" id="middlename">
+
+        <label>Last Name: </label>
+        <input type="text" name="lastname" id="lastname">
+
+        <label>Address: </label>
+        <input type="text" name="address" id="address">
+
+        <label> Birthdate: </label>
+        <input type="datetime" name="birthdate" id="birthdate">
+
+        <label> Contact Number: </label>
+        <input type="tel" name="contact" id="contact" placeholder="e.g 0912-345-6789">
+
+        <label> Gender: </label>
+        <input type="radio" name="gender" id="gender"> Male
+        <input type="radio" name="gender" id="gender"> Female
+
+        <label> Medical History: </label>
+        <input type="checkbox" name="medHistory" id="medHistory"> Asthma
+        <input type="checkbox" name="medHistory" id="medHistory"> Cancer
+        <input type="checkbox" name="medHistory" id="medHistory"> Cardiac Disease
+        <input type="checkbox" name="medHistory" id="medHistory"> Diabetes
+        <input type="checkbox" name="medHistory" id="medHistory"> Hypertension
+        <input type="checkbox" name="medHistory" id="medHistory"> Psychiatric Disorder
+        <input type="checkbox" name="medHistory" id="medHistory"> Epilepsy
+        <input type="checkbox" name="medHistory" id="medHistory"> Others
+
+        <label>Current Symptoms: </label>
+        <select name="symptom" id="symptom" multiple>
+            <option value="">Chest Pain</option>
+            <option value="">Respiratory</option>
+            <option value="">Hematological</option>
+            <option value="">Lymphatic</option>
+            <option value="">Neurological</option>
+        </select>
+
+        <label> Are you currently taking any medication? </label>
+        <input type="radio" name="medication" id="medication"> Yes
+        <input type="radio" name="medication" id="medication"> No
+        <input type="text" name="ifYes" id="ifYes" placeholder="If Yes, please list down your current medications.">
+
+        <button id="submit">SUBMIT</button>
+        <button id="reset">RESET</button>
+    </form>
+</div>
+</body>
+</html>
