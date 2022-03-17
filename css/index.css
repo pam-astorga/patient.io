@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+}
+
+small {
+    color: red;
+}
+
+span {
+    color: red;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
 .container {
     display: block;
     justify-content: center;
@@ -12,7 +27,7 @@
     padding: 0.5em 0 1em 2em;
 }
 
-.container2 {
+#container2 {
     padding-left: 2em;
 }
 

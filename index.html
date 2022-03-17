@@ -10,20 +10,25 @@
 <body>
 <div class="container">
         <h1>Login Information</h1>
-        <small id="error"></small>
+        
     <form id="loginForm">
         <label>Username: </label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="username" required>
 
         <label>Password</label>
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password" required>
 
-        <button type="submit" id="submit">Log-in</button>
+        <button type="submit" id="login">Log-in</button>
     </form>
 </div>
-<div class="container2">
+
+<div class="error">
+    <small id="error"></small>
+</div>
+
+<div id="container2">
     <h2>Patient Form</h2>
-    <p>Welcome, </p>
+    <p>Welcome,    <span id="user"></span> </p>
     <form id="system">
         <table>
             <tr>
@@ -32,27 +37,27 @@
                 <td><input type="text" name="lastname" id="lastname"></td>
             </tr>
             <tr>
-                <td><label>First Name </label></td>
+                <td><label>First Name <span>*</span> </label></td>
                 <td><label>Middle Name </label></td>
-                <td><label>Last Name </label></td>
+                <td><label>Last Name <span>*</span> </label></td>
             </tr>
             <tr>
                 <td colspan="3"><input type="text" name="address" id="address"></td>
             </tr>
             <tr>
-                <td><label>Address</label></td>
+                <td><label>Address <span>*</span> </label></td>
             </tr>
             <tr>
-                <td><input type="datetime" name="birthdate" id="birthdate"></td>
-                <td><input type="tel" name="contact" id="contact" placeholder="e.g 0912-345-6789"></td>
-                <td> <label> Gender: </label>
+                <td><input type="date" name="birthdate" id="birthdate"></td>
+                <td><input type="tel" name="contact" id="contact" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" maxlength="11"></td>
+                <td> <label> Gender: <span>*</span> </label>
                     <input type="radio" name="gender" id="gender"> Male
                     <input type="radio" name="gender" id="gender"> Female
                 </td>
             </tr>
             <tr>
-                <td><label> Birthdate: </label></td>
-                <td><label> Contact Number: </label></td>
+                <td><label> Birthdate: <span>*</span>  </label></td>
+                <td><label> Contact Number: <span>*</span> </label></td>
             </tr>
             <tr>
                 <td><label> Medical History: </label></td>
@@ -78,13 +83,16 @@
                         <option value="">Hematological</option>
                         <option value="">Lymphatic</option>
                         <option value="">Neurological</option>
+                        <option value="">Psychiatric</option>
+                        <option value="">Gastrointestinal</option>
+                        <option value="">Weight Loss</option>
                     </select>
                 </td>
                 <td>
-                    <label> Are you currently taking any medication? </label>
-                    <input type="radio" name="medication" id="medication"> Yes
-                    <input type="radio" name="medication" id="medication"> No
-                    <input type="text" name="ifYes" id="ifYes" placeholder="If Yes, please list down your current medications.">
+                    <label> Are you currently taking any medication? </label><br>
+                    <input type="radio" name="medication" id="medYes"> Yes
+                    <input type="radio" name="medication" id="medNo"> No <br>
+                    <input type="text" name="ifYes" id="ifYes" disabled>
                 </td>
             </tr>
         </table>
