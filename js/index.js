@@ -1,16 +1,19 @@
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 let login = document.getElementById("login");
+let patientForm = [];
 
-//patientForm.style.visibility = "hidden";
+let container = document.getElementById("container2");
+
+container.style.visibility = "hidden";
 
 let submit = document.getElementById("submit");
 
-login.addEventListener("click", () => {
-
+login.addEventListener("click", (event) => {
+    event.preventDefault();
     if (username.value === 'Administrator' && password.value === 'admin123') {
         console.log("Login successful");
-        patientForm.style.visibility = 'visible';
+        container.style.visibility = 'visible';
         document.getElementById("user").innerText = username.value;
     } else {
         document.getElementById("error").textContent = "Wrong credentials. Try again.";
@@ -29,6 +32,27 @@ submit.addEventListener("click", (event) => {
     let progOption = document.getElementById("symptom");
     let mapProg2 = [...progOption.selectedOptions].map(option => option.value)
     document.getElementById("error").textContent += "You have to choose one symptom.";
+
+    let details = {
+        firstName: document.getElementById("firstname").value,
+        middleName: document.getElementById("middlename").value,
+        lastName: document.getElementById("lastname").value,
+        address: document.getElementById("address").value,
+        birthdate: document.getElementById("birthdate").value,
+        contactNumber: document.getElementById("contact").value,
+        gender: document.getElementById("gender").value,
+        medicalHistory: document.getElementById("medHistory").value,
+        symptoms: document.getElementById("symptom").value
+        //medication: 
+    }
+    patientForm.push(details);
+    //document.querySelector('#reviewForm').reset();
+    console.table(patientForm);
+
+    let display = document.querySelector("#display pre");
+    //display.textContent = "\n" + JSON.stringify(patientForm);
+    //storing data in localStorage
+    localStorage.setItem("Patient Form", JSON.stringify(patientForm));
 })
 
 function checkFirstName() {
