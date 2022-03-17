@@ -10,10 +10,11 @@
 <body>
     
 <div class="container">
-    <h3>Login Information</h3> 
-    <h2>Patient Information System</h2>
+    
+    <p id="header">Patient Information System</p>
                
     <form id="loginForm">
+        <h3>Login Information</h3> 
         <label>Username: </label>
         <input type="text" name="username" id="username" required>
 
@@ -34,32 +35,39 @@
     <form id="system">
         <table>
             <tr>
-                <td><input type="text" name="firstname" id="firstname"></td>
-                <td><input type="text" name="middlename" id="middlename"></td>
-                <td><input type="text" name="lastname" id="lastname"></td>
-            </tr>
-            <tr>
-                <td><label>First Name <span>*</span> </label></td>
-                <td><label>Middle Name </label></td>
-                <td><label>Last Name <span>*</span> </label></td>
-            </tr>
-            <tr>
-                <td colspan="3"><input type="text" name="address" id="address"></td>
-            </tr>
-            <tr>
-                <td><label>Address <span>*</span> </label></td>
-            </tr>
-            <tr>
-                <td><input type="date" name="birthdate" id="birthdate"></td>
-                <td><input type="tel" name="contact" id="contact" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" maxlength="11"></td>
-                <td> <label> Gender: <span>*</span> </label>
-                    <input type="radio" name="gender" id="gender"> Male
-                    <input type="radio" name="gender" id="gender"> Female
+                <td>
+                    <label>First Name: <span>*</span></label>
+                    <input type="text" name="firstname" id="firstname">
+                </td>
+                <td>
+                    <label>Middle Name: </label>
+                    <input type="text" name="middlename" id="middlename">
+                </td>
+                <td>
+                    <label>Last Name: <span>*</span></label>
+                    <input type="text" name="lastname" id="lastname">
                 </td>
             </tr>
             <tr>
-                <td><label> Birthdate: <span>*</span>  </label></td>
-                <td><label> Contact Number: <span>*</span> </label></td>
+                <td colspan="3">
+                    <label>Address: <span>*</span></label>
+                    <input type="text" name="address" id="address">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Birthdate: <span>*</span></label>
+                    <input type="date" name="birthdate" id="birthdate">
+                </td>
+                <td>
+                    <label> Contact Number: <span>*</span></label>
+                    <input type="tel" name="contact" id="contact" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" maxlength="11">
+                </td>
+                <td> 
+                    <label> Gender: <span>*</span> </label>
+                    <input type="radio" name="gender" id="gender"> Male
+                    <input type="radio" name="gender" id="gender"> Female
+                </td>
             </tr>
             <tr>
                 <td><label> Medical History: </label></td>

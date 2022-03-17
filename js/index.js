@@ -1,6 +1,7 @@
 let username = document.getElementById("username");
 let password = document.getElementById("password");
 let login = document.getElementById("login");
+let loginForm = document.getElementById("loginForm");
 let patientForm = [];
 
 let container = document.getElementById("container2");
@@ -12,9 +13,10 @@ let submit = document.getElementById("submit");
 login.addEventListener("click", (event) => {
     event.preventDefault();
     if (username.value === 'Administrator' && password.value === 'admin123') {
-        console.log("Login successful");
+        alert("Login successful");
         container.style.visibility = 'visible';
         document.getElementById("user").innerText = username.value;
+        loginForm.style.visibility = 'hidden';
     } else {
         document.getElementById("error").textContent = "Wrong credentials. Try again.";
     }
@@ -40,7 +42,7 @@ submit.addEventListener("click", (event) => {
         address: document.getElementById("address").value,
         birthdate: document.getElementById("birthdate").value,
         contactNumber: document.getElementById("contact").value,
-        gender: document.getElementById("gender").checked,
+        gender: document.querySelectorAll("input[name= 'gender']:checked"),
         medicalHistory: document.getElementById("medHistory").value,
         symptoms: document.getElementById("symptom").selectedOptions
         //medication: 
@@ -88,7 +90,7 @@ function checkContact() {
 }
 
 function checkGender() {
-    let gender = document.getElementById("gender");
+    let gender = document.querySelectorAll("input[name= 'gender']:checked");
     if (gender.checked == "") {
         document.getElementById("error").textContent += "Gender is missing.";
     }
@@ -112,9 +114,9 @@ noButton.addEventListener('click', () => {
     }
 })
 
-//let reset = document.querySelector("#reset");
+let reset = document.querySelector("#reset");
 
-reset.addEventListener('click', (event) => {
-    event.preventDefault();
-    document.querySelector("#system").reset();
+reset.addEventListener('click', (event2) => {
+    event2.preventDefault();
+    document.getElementById("system").reset();
 })
