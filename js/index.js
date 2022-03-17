@@ -31,7 +31,7 @@ submit.addEventListener("click", (event) => {
 
     let progOption = document.getElementById("symptom");
     let mapProg2 = [...progOption.selectedOptions].map(option => option.value)
-    document.getElementById("error").textContent += "You have to choose one symptom.";
+    document.getElementById("error").textContent += "You have to choose atleast one symptom.";
 
     let details = {
         firstName: document.getElementById("firstname").value,
@@ -40,18 +40,15 @@ submit.addEventListener("click", (event) => {
         address: document.getElementById("address").value,
         birthdate: document.getElementById("birthdate").value,
         contactNumber: document.getElementById("contact").value,
-        gender: document.getElementById("gender").value,
+        gender: document.getElementById("gender").checked,
         medicalHistory: document.getElementById("medHistory").value,
-        symptoms: document.getElementById("symptom").value
+        symptoms: document.getElementById("symptom").selectedOptions
         //medication: 
     }
     patientForm.push(details);
-    //document.querySelector('#reviewForm').reset();
     console.table(patientForm);
 
     let display = document.querySelector("#display pre");
-    //display.textContent = "\n" + JSON.stringify(patientForm);
-    //storing data in localStorage
     localStorage.setItem("Patient Form", JSON.stringify(patientForm));
 })
 
@@ -115,8 +112,9 @@ noButton.addEventListener('click', () => {
     }
 })
 
-let reset = document.querySelector("#reset");
+//let reset = document.querySelector("#reset");
 
-reset.addEventListener('click', () => {
+reset.addEventListener('click', (event) => {
+    event.preventDefault();
     document.querySelector("#system").reset();
 })

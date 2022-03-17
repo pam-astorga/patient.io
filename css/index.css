@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,11 @@
 body {
     background-image: url(images/bg.jpg);
     background-size: cover;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: xx-large;
 }
 
 small {
@@ -20,9 +27,9 @@ span {
 }
 
 .container {
-    display: block;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 30em;
+    grid-template-rows: 1fr;
     margin-bottom: 2em;
     padding: 0.5em 0 1em 2em;
 }
