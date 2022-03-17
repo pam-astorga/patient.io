@@ -34,10 +34,15 @@ span {
     grid-template-columns: 1fr 40em;
     grid-template-rows: 1fr;
     padding: 0.5em 0 1em 2em;
+    border-radius: 50px;  
 }
 
 #container2 {
-    padding-left: 2em;
+    margin: auto;  
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #a1a1a1,
+                -20px -20px 60px #ffffff;
+                max-width: fit-content;
 }
 
 #system {

@@ -5,8 +5,10 @@ let loginForm = document.getElementById("loginForm");
 let patientForm = [];
 
 let container = document.getElementById("container2");
+let logout = document.getElementById("logout");
 
 container.style.visibility = "hidden";
+logout.style.visibility = "hidden";
 
 let submit = document.getElementById("submit");
 
@@ -17,8 +19,9 @@ login.addEventListener("click", (event) => {
         container.style.visibility = 'visible';
         document.getElementById("user").innerText = username.value;
         loginForm.style.visibility = 'hidden';
+        logout.style.visibility = "visible";
     } else {
-        document.getElementById("error").textContent = "Wrong credentials. Try again.";
+        document.getElementById("error2").textContent = "Wrong credentials. Try again.";
     }
 })
 
